@@ -67,4 +67,23 @@
     /* The max width of the info window. */
     width: 200px;
   }
+
+  .destination-info {
+    font-size: 18px;
+  }
   
+  .carousel-item {
+    height: 500px;
+  } 
+
+  .carousel-item img {
+    margin: auto;
+  }
+
+  .carousel-item.active {
+    display: flex;
+  }
+
+  .carousel-control-prev-icon,.carousel-control-next-icon {
+    background-color: black;
+  }

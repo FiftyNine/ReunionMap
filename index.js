@@ -1,71 +1,70 @@
 let map, popup, Popup;
 
 /** Initializes the map and the custom popup. */
-function initMap() {
+async function initMap() {
+  // const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -33.9, lng: 151.1 },
-    zoom: 10,
+    center: { lat: 40, lng: 15 },
+    zoom: 3,
+    mapId: 'f36c7f92e6086cb9'
   });
-  /**
-   * A customized popup on the map.
-   */
-  class Popup extends google.maps.OverlayView {
-    position;
-    containerDiv;
-    constructor(position, content) {
-      super();
-      this.position = position;
-      content.classList.add("popup-bubble");
 
-      // This zero-height div is positioned at the bottom of the bubble.
-      const bubbleAnchor = document.createElement("div");
+  // Create an info window to share between markers.
+  const infoWindow = new google.maps.InfoWindow();
 
-      bubbleAnchor.classList.add("popup-bubble-anchor");
-      bubbleAnchor.appendChild(content);
-      // This zero-height div is positioned at the bottom of the tip.
-      this.containerDiv = document.createElement("div");
-      this.containerDiv.classList.add("popup-container");
-      this.containerDiv.appendChild(bubbleAnchor);
-      // Optionally stop clicks, etc., from bubbling up to the map.
-      Popup.preventMapHitsAndGesturesFrom(this.containerDiv);
-    }
-    /** Called when the popup is added to the map. */
-    onAdd() {
-      this.getPanes().floatPane.appendChild(this.containerDiv);
-    }
-    /** Called when the popup is removed from the map. */
-    onRemove() {
-      if (this.containerDiv.parentElement) {
-        this.containerDiv.parentElement.removeChild(this.containerDiv);
-      }
-    }
-    /** Called each frame when the popup needs to draw itself. */
-    draw() {
-      const divPosition = this.getProjection().fromLatLngToDivPixel(
-        this.position,
-      );
-      // Hide the popup when it is far out of view.
-      const display =
-        Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000
-          ? "block"
-          : "none";
-
-      if (display === "block") {
-        this.containerDiv.style.left = divPosition.x + "px";
-        this.containerDiv.style.top = divPosition.y + "px";
-      }
-
-      if (this.containerDiv.style.display !== display) {
-        this.containerDiv.style.display = display;
-      }
-    }
+  for (const d of destinations)
+  {
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+      map,
+      position: { lat: d.lat, lng: d.lon },
+      title: d.name,
+      gmpClickable: true
+    });
+  
+    marker.addListener('click', ({domEvent, latLng}) => {
+      const {target} = domEvent;
+      infoWindow.close();
+      let content = document.getElementById("destination-popup");
+      var dn = document.getElementById("destination-name");
+      dn.innerText = d.name + ", " + d.country;
+      dn.setAttribute("href", "https://en.wikipedia.org/wiki/" + d.name);
+      document.getElementById("destination-temperature").innerText = d.temperature;
+      document.getElementById("destination-population").innerText = d.population;
+      document.getElementById("destination-temperature").innerText = d.temperature;
+      document.getElementById("destination-escape").innerText = d.escape_rooms;
+      document.getElementById("destination-food").innerText = d.food;
+      document.getElementById("destination-safety").innerText = d.safety;
+      document.getElementById("destination-availability").innerText = d.ease_of_access;
+      document.getElementById("destination-attractions").innerText = d.attractions.join(", ");
+      var indicators = document.getElementById("destination-carousel-indicators");
+      indicators.innerHTML = "";
+      var slides = document.getElementById("destination-carousel-slides");
+      slides.innerHTML = "";
+      for (let i = 0; i < d.images.length; i++)
+      {
+        let indicator = document.createElement("li");
+        indicator.setAttribute("data-target", "#destination-carousel");
+        indicator.setAttribute("data-slide-to", i.toString());
+        if (i == 0)
+          indicator.classList.add("active");
+        indicators.appendChild(indicator);
+        let slide = document.createElement("div");
+        slide.classList.add("carousel-item");
+        if (i == 0)
+          slide.classList.add("active");
+        let img = document.createElement("img");
+        img.classList.add("d-block");
+        img.classList.add("mw-100");
+        img.classList.add("mh-100");
+        img.alt = i.toString();
+        img.src = "img/" + d.images[i];
+        slide.append(img);
+        slides.appendChild(slide);
+      }      
+      infoWindow.setContent(content.outerHTML);
+      infoWindow.open(marker.map, marker);
+    });  
   }
-
-  popup = new Popup(
-    new google.maps.LatLng(-33.866, 151.196),
-    document.getElementById("content"),
-  );
-  popup.setMap(map);
 }
 
 window.initMap = initMap;
