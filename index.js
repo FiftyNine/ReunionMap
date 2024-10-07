@@ -14,11 +14,19 @@ async function initMap() {
 
   for (const d of destinations)
   {
+    const pin = new google.maps.marker.PinElement({
+      scale: d.eliminated ? 0.75 : 1,
+      background: d.eliminated ? "#a6a6a6" : "#ea4335",
+      glyphColor: d.eliminated ? "#515151" : "#b31412",
+      borderColor: d.eliminated ? "#5e5e5e" : "#c5221f",
+    });
+
     const marker = new google.maps.marker.AdvancedMarkerElement({
       map,
       position: { lat: d.lat, lng: d.lon },
       title: d.name,
-      gmpClickable: true
+      gmpClickable: true,
+      content: pin.element
     });
   
     marker.addListener('click', ({domEvent, latLng}) => {
