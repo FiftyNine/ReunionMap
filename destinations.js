@@ -2,7 +2,7 @@ const destinations = [
     {
         "id": "6ba4a8e5-8e0b-49b2-84d4-ef3dbbc4168b",
         "name": "Lyon",
-        "eliminated": false,
+        "eliminated": true,
         "country": "France",
         "temperature": "18°C",
         "population": "0.523M",
@@ -165,7 +165,7 @@ const destinations = [
     {
         "id": "9c170746-81ed-427f-879a-4c747a84ffce",
         "name": "Zagreb",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Croatia",
         "temperature": "18°C",
         "population": "0.77M",
@@ -227,7 +227,7 @@ const destinations = [
     {
         "id": "d249ee1b-1c86-4742-92df-0b17d1b5aac6",
         "name": "Hanoi",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Vietnam",
         "temperature": "28°C",
         "population": "8M",
@@ -289,7 +289,7 @@ const destinations = [
     {
         "id": "5b1933d4-68af-4069-b390-a2de605e12cb",
         "name": "Zurich",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Switzerland",
         "temperature": "15°C",
         "population": "0.434M",
@@ -343,7 +343,7 @@ const destinations = [
     {
         "id": "fee3c425-3077-4979-9950-7b10b9dc1bd8",
         "name": "Nha Trang",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Vietnam",
         "temperature": "27°C",
         "population": "0.535M",
@@ -458,7 +458,7 @@ const destinations = [
     {
         "id": "43369418-c901-4e8a-97d2-9825023fe124",
         "name": "Sharm-el-sheikh",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Egypt",
         "temperature": "30°C",
         "population": "0.073M",
@@ -596,7 +596,7 @@ const destinations = [
     {
         "id": "b1731f3a-d679-46ea-991d-bdbd6f1a7f1d",
         "name": "Toronto",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Canada",
         "temperature": "17°C",
         "population": "2.7M",
@@ -674,7 +674,7 @@ const destinations = [
     {
         "id": "58afb82a-920e-4e43-9771-c5286ba128eb",
         "name": "Bern",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Switzerland",
         "temperature": "15°C",
         "population": "0.13M",
@@ -702,7 +702,7 @@ const destinations = [
     {
         "id": "9a6e40cc-8373-4137-99eb-8f9b6619850b",
         "name": "Kuala Lumpur",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Malaysia",
         "temperature": "27°C",
         "population": "8.21M",
@@ -816,7 +816,7 @@ const destinations = [
     {
         "id": "d6f8a4db-2434-472b-adc4-de848d4561a5",
         "name": "Antalya",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Turkey",
         "temperature": "24°C",
         "population": "2.55M",
@@ -968,7 +968,7 @@ const destinations = [
     {
         "id": "7df7919d-a104-4ceb-bb74-2f7538a7bcca",
         "name": "Sevilla",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Spain",
         "temperature": "25°C",
         "population": "0.688M",
@@ -1116,7 +1116,7 @@ const destinations = [
     {
         "id": "f01af15b-51ef-4b22-bfd7-16ac55759f2e",
         "name": "Rio de Janeiro",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Brazil",
         "temperature": "23°C",
         "population": "6.7M",
@@ -1201,7 +1201,7 @@ const destinations = [
     {
         "id": "aee5677a-4f86-43d9-b480-33d1cbb94835",
         "name": "Stockholm",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Sweden",
         "temperature": "13°C",
         "population": "0.975M",
@@ -1288,7 +1288,7 @@ const destinations = [
     {
         "id": "02bf6836-c8b8-4468-b3d2-b0dfd9b3ecff",
         "name": "Istanbul",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Turkey",
         "temperature": "22°C",
         "population": "15.5M",
@@ -1375,7 +1375,7 @@ const destinations = [
     {
         "id": "736cc932-108f-40c7-b6d5-f08d76b662aa",
         "name": "Madeira Island",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Portugal",
         "temperature": "22°C",
         "population": "0.268M",
@@ -1652,7 +1652,7 @@ const destinations = [
     {
         "id": "3ccb9e56-6684-4924-929c-b136496e5fd9",
         "name": "Jeju",
-        "eliminated": false,
+        "eliminated": true,
         "country": "South Korea",
         "temperature": "23°C",
         "population": "0.697M",
@@ -1698,7 +1698,7 @@ const destinations = [
     {
         "id": "2165c3af-22b1-47c8-91e1-6bbd1a8414ce",
         "name": "Munich",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Germany",
         "temperature": "15°C",
         "population": "1.5M",
@@ -1729,7 +1729,7 @@ const destinations = [
     {
         "id": "f66c00e5-059c-4e2f-b16a-7da863e725c5",
         "name": "Kathmandu",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Nepal",
         "temperature": "22°C",
         "population": "1.5M",
@@ -1758,7 +1758,7 @@ const destinations = [
     {
         "id": "1d06d0cd-013f-4b67-b6c7-7d2ff3fd8556",
         "name": "Ko Tao",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Thailand",
         "temperature": "29°C",
         "population": "0.0014M",
@@ -1811,7 +1811,7 @@ const destinations = [
     {
         "id": "a2653ae9-b71a-4397-9d57-8d06cd731b66",
         "name": "Bucharest",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Romania",
         "temperature": "18°C",
         "population": "1.83M",
@@ -1868,7 +1868,7 @@ const destinations = [
     {
         "id": "0f74b13a-91cd-467d-8eb7-1d7b7f944e45",
         "name": "Nice",
-        "eliminated": false,
+        "eliminated": true,
         "country": "France",
         "temperature": "20°C",
         "population": "0.343M",
@@ -1922,7 +1922,7 @@ const destinations = [
     {
         "id": "1bd168ea-6eac-43f4-a78c-4a7952a7eef6",
         "name": "Busan",
-        "eliminated": false,
+        "eliminated": true,
         "country": "South Korea",
         "temperature": "23°C",
         "population": "3.4M",
@@ -1977,7 +1977,7 @@ const destinations = [
     {
         "id": "f430c99e-06f3-4b1e-9229-3a2bb7b2d419",
         "name": "Da Nang",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Vietnam",
         "temperature": "26°C",
         "population": "1.1M",
@@ -2001,7 +2001,7 @@ const destinations = [
     {
         "id": "c9a30e9b-b41b-4a2e-8b7e-f88e677f08fb",
         "name": "Manila",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Philippines",
         "temperature": "28°C",
         "population": "1.78M",
@@ -2030,7 +2030,7 @@ const destinations = [
     {
         "id": "2a66c9f2-c9e7-4eb5-837f-b7a7b14f170a",
         "name": "Edinburgh",
-        "eliminated": false,
+        "eliminated": true,
         "country": "United Kingdom",
         "temperature": "12°C",
         "population": "0.527M",
@@ -2094,7 +2094,7 @@ const destinations = [
     {
         "id": "8f011caa-fd31-4b0a-ae42-3670448dfff1",
         "name": "Sapporo",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Japan",
         "temperature": "18°C",
         "population": "1.9M",
@@ -2184,7 +2184,7 @@ const destinations = [
     {
         "id": "e6fa214c-9ed0-4522-810f-6e68d22495e1",
         "name": "Berlin",
-        "eliminated": false,
+        "eliminated": true,
         "country": "Germany",
         "temperature": "16°C",
         "population": "3.7M",
