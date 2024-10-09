@@ -658,7 +658,7 @@ const destinations = [
     {
         "id": "5c628b82-77e1-4e22-9627-31f5056150da",
         "name": "Agia Napa",
-        "eliminated": true,
+        "eliminated": false,
         "country": null,
         "temperature": "25°C",
         "population": "0.003M",
